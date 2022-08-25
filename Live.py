@@ -1,13 +1,14 @@
 import CurrencyRouletteGame
 import GuessGame
 import MemoryGame
+import Score
 
 
 def welcome(name):
     return f"Hello {name} and welcome to the World of Games (WoG).\nHere you can find many cool games to play."
 
 
-def load_game():
+def load_game(name):
     games = ['Memory Game', 'Guess Game', 'Currency Roulette']
 
     selection = input('''
@@ -30,8 +31,11 @@ def load_game():
     print(f"Your difficulty level is {difficulty}")
 
     if selection == '1':
-        MemoryGame.play(difficulty)
+        result = MemoryGame.play(difficulty)
     elif selection == '2':
-        GuessGame.play(difficulty)
+        result = GuessGame.play(difficulty)
     else:
-        print(CurrencyRouletteGame.play(difficulty))
+        result = CurrencyRouletteGame.play(difficulty)
+
+    if result:
+        Score.add_score(difficulty, name)

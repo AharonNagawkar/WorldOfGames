@@ -7,8 +7,9 @@ def generate_number(num_limit):
 
 def get_guess_from_user(num_limit):
     selection = input(f"Guess a number from 1 to {num_limit}\n")
-    while selection not in [str(num) for num in range(1, num_limit+1)]:
-        selection = input(f"Please select a number between 1 and {num_limit} only.\n")
+    # NEED Further learning of the case:
+    # while selection not in [str(num) for num in range(1, num_limit+1)]:
+    #     selection = input(f"Please select a number between 1 and {num_limit} only.\n")
     return selection
 
 
