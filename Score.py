@@ -11,7 +11,6 @@ def data_reconstruction(data, difficulty, player):
     if player[0].upper() + player[1:].lower() in list(players_score.keys()):
         players_score[(player[0].upper() + player[1:].lower())] += int(difficulty)*3 + 5
     else:
-
         players_score[(player[0].upper() + player[1:].lower())] = int(difficulty) * 3 + 5
     return [f'{key} = {players_score[key]}\n' for key in players_score]
 

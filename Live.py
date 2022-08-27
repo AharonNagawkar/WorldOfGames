@@ -38,4 +38,7 @@ def load_game(name):
         result = CurrencyRouletteGame.play(difficulty)
 
     if result:
+        print(f"Way to go {name}! you've got it right, and won {int(difficulty)*3 + 5} points for this round.")
         Score.add_score(difficulty, name)
+    else:
+        print(f"Sorry {name}, you've lost this round.")
