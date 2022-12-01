@@ -18,5 +18,5 @@ def compare_results(secret, user):
 
 def play(difficulty_level):
     secret_number = generate_number(difficulty_level)
-    user_numer = get_guess_from_user(difficulty_level)
-    return compare_results(secret_number, user_numer)
+    user_number = get_guess_from_user(difficulty_level)
+    return compare_results(secret_number, user_number)
